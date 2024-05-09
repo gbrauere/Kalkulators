@@ -3,6 +3,22 @@ from tkinter import *
 mansLogs=Tk() #Tk=tkinter
 mansLogs.title('Kalkulators')
 
+def btnClick(number):
+    current=e.get() #nolasa skaitli
+    e.delete(0,END) #nodzēš
+    newNumber=str(current)+str(number)
+    e.insert(0,newNumber) #ievieto displeja
+    return 0
+
+def btnCommand(command):
+    global number
+    global num1 #jāiegaumē skaitlis, darbība
+    global mathOp #matemātiskais operators (+,-,*,/)
+    mathOp=command
+    num1=int(e.get())
+    e.delete(0,END)
+    return 0
+
 e=Entry(mansLogs,width=15,bd=10,font=("Arial Black",20),justify="right") #izveido ievades logu/displeju
 
 btn0=Button(mansLogs,text='0',padx='40',pady='20') #izveido pogu
