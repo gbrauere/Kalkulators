@@ -46,26 +46,21 @@ e=Entry(mansLogs,width=18,bd=10,font=("Lucida Sans Typewriter",23),justify="righ
 
 #-----------------------------
 
-btn0=Button(mansLogs,text='0',padx='35',pady='20',bd='5',font=("Lucida Sans Typewriter",10),command=lambda:btnClick(0),bg='#4dd652'
-) #izveido pogu, formatē to
-btn1=Button(mansLogs,text='1',padx='35',pady='20',bd='5',font=("Lucida Sans Typewriter",10),command=lambda:btnClick(1),bg='#4dd652'
-)
-btn2=Button(mansLogs,text='2',padx='35',pady='20',bd='5',font=("Lucida Sans Typewriter",10),command=lambda:btnClick(2),bg='#4dd652'
-)
-btn3=Button(mansLogs,text='3',padx='35',pady='20',bd='5',font=("Lucida Sans Typewriter",10),command=lambda:btnClick(3),bg='#4dd652'
-)
-btn4=Button(mansLogs,text='4',padx='35',pady='20',bd='5',font=("Lucida Sans Typewriter",10),command=lambda:btnClick(4),bg='#4dd652'
-)
-btn5=Button(mansLogs,text='5',padx='35',pady='20',bd='5',font=("Lucida Sans Typewriter",10),command=lambda:btnClick(5),bg='#4dd652'
-)
-btn6=Button(mansLogs,text='6',padx='35',pady='20',bd='5',font=("Lucida Sans Typewriter",10),command=lambda:btnClick(6),bg='#4dd652'
-)
-btn7=Button(mansLogs,text='7',padx='35',pady='20',bd='5',font=("Lucida Sans Typewriter",10),command=lambda:btnClick(7),bg='#4dd652'
-)
-btn8=Button(mansLogs,text='8',padx='35',pady='20',bd='5',font=("Lucida Sans Typewriter",10),command=lambda:btnClick(8),bg='#4dd652'
-)
-btn9=Button(mansLogs,text='9',padx='35',pady='20',bd='5',font=("Lucida Sans Typewriter",10),command=lambda:btnClick(9),bg='#4dd652'
-)
+btn0=Button(mansLogs,text='0',padx='35',pady='20',bd='5',font=("Lucida Sans Typewriter",10),command=lambda:btnClick(0),bg='#4dd652') #izveido pogu, formatē to
+
+btn1=Button(mansLogs,text='1',padx='35',pady='20',bd='5',font=("Lucida Sans Typewriter",10),command=lambda:btnClick(1),bg='#4dd652')
+btn2=Button(mansLogs,text='2',padx='35',pady='20',bd='5',font=("Lucida Sans Typewriter",10),command=lambda:btnClick(2),bg='#4dd652')
+btn3=Button(mansLogs,text='3',padx='35',pady='20',bd='5',font=("Lucida Sans Typewriter",10),command=lambda:btnClick(3),bg='#4dd652')
+
+btn4=Button(mansLogs,text='4',padx='35',pady='20',bd='5',font=("Lucida Sans Typewriter",10),command=lambda:btnClick(4),bg='#4dd652')
+btn5=Button(mansLogs,text='5',padx='35',pady='20',bd='5',font=("Lucida Sans Typewriter",10),command=lambda:btnClick(5),bg='#4dd652')
+btn6=Button(mansLogs,text='6',padx='35',pady='20',bd='5',font=("Lucida Sans Typewriter",10),command=lambda:btnClick(6),bg='#4dd652')
+
+btn7=Button(mansLogs,text='7',padx='35',pady='20',bd='5',font=("Lucida Sans Typewriter",10),command=lambda:btnClick(7),bg='#4dd652')
+btn8=Button(mansLogs,text='8',padx='35',pady='20',bd='5',font=("Lucida Sans Typewriter",10),command=lambda:btnClick(8),bg='#4dd652')
+btn9=Button(mansLogs,text='9',padx='35',pady='20',bd='5',font=("Lucida Sans Typewriter",10),command=lambda:btnClick(9),bg='#4dd652')
+
+#-----------------------------
 
 btnSask=Button(mansLogs,text='+',padx='35',pady='20',bd='5',command=lambda:btnCommand('+'),bg='green',font=("Lucida Sans Typewriter",10))
 btnAtn=Button(mansLogs,text='-',padx='35',pady='20',bd='5',command=lambda:btnCommand('-'),bg='green',font=("Lucida Sans Typewriter",10))
@@ -83,6 +78,7 @@ btnSask.grid(row=2,column=3) #pogas atrašanās vieta
 btnAtn.grid(row=3,column=3)
 btnDal.grid(row=4,column=3)
 btnReiz.grid(row=5,column=3)
+
 btnC.grid(row=5,column=1)
 btnVien.grid(row=5,column=2)
 
