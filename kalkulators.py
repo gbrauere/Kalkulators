@@ -3,7 +3,7 @@ from tkinter import *
 mansLogs=Tk() #Tk=tkinter
 mansLogs.title('Kalkulators')
 
-def btnClick(number):
+def btnClick(number): #definē funkciju
     current=e.get() #nolasa skaitli
     e.delete(0,END) #nodzēš
     newNumber=str(current)+str(number)
@@ -23,7 +23,7 @@ def Vienads():
     num2=int(e.get())
     result=0
     if mathOp=="+":
-        result=num1+num2
+        result=num1+num2 #nosaka, kāda darbība tiek izpildīta nospiežot pogu
     elif mathOp=="-":
         result=num1-num2
     elif mathOp=="*":
@@ -42,10 +42,12 @@ def notirit():
     mathOp=""
     return 0
 
-e=Entry(mansLogs,width=18,bd=10,font=("Arial Black",20),justify="right",bg='#b0ebb2') #izveido ievades logu/displeju
+e=Entry(mansLogs,width=18,bd=10,font=("Lucida Sans Typewriter",23),justify="right",bg='#b0ebb2') #izveido ievades logu/displeju
+
+#-----------------------------
 
 btn0=Button(mansLogs,text='0',padx='35',pady='20',bd='5',font=("Lucida Sans Typewriter",10),command=lambda:btnClick(0),bg='#4dd652'
-) #izveido pogu
+) #izveido pogu, formatē to
 btn1=Button(mansLogs,text='1',padx='35',pady='20',bd='5',font=("Lucida Sans Typewriter",10),command=lambda:btnClick(1),bg='#4dd652'
 )
 btn2=Button(mansLogs,text='2',padx='35',pady='20',bd='5',font=("Lucida Sans Typewriter",10),command=lambda:btnClick(2),bg='#4dd652'
@@ -69,12 +71,15 @@ btnSask=Button(mansLogs,text='+',padx='35',pady='20',bd='5',command=lambda:btnCo
 btnAtn=Button(mansLogs,text='-',padx='35',pady='20',bd='5',command=lambda:btnCommand('-'),bg='green',font=("Lucida Sans Typewriter",10))
 btnDal=Button(mansLogs,text='/',padx='35',pady='20',bd='5',command=lambda:btnCommand('/'),bg='green',font=("Lucida Sans Typewriter",10))
 btnReiz=Button(mansLogs,text='*',padx='35',pady='20',bd='5',command=lambda:btnCommand('*'),bg='green',font=("Lucida Sans Typewriter",10))
+
 btnC=Button(mansLogs,text='C',padx='35',pady='20',bd='5',command=notirit,bg='green',font=("Lucida Sans Typewriter",10))
 btnVien=Button(mansLogs,text='=',padx='35',pady='20',bd='5',command=Vienads,bg='green',font=("Lucida Sans Typewriter",10))
 
+#-----------------------------
+
 e.grid(row=0,column=0,columnspan=4,) #displeja atrašanās vieta
 
-btnSask.grid(row=2,column=3)
+btnSask.grid(row=2,column=3) #pogas atrašanās vieta
 btnAtn.grid(row=3,column=3)
 btnDal.grid(row=4,column=3)
 btnReiz.grid(row=5,column=3)
@@ -94,5 +99,7 @@ btn2.grid(row=4,column=1)
 btn3.grid(row=4,column=2)
 
 btn0.grid(row=5,column=0)
+
+#-----------------------------
 
 mansLogs.mainloop()
