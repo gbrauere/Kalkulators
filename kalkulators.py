@@ -19,6 +19,29 @@ def btnCommand(command):
     e.delete(0,END)
     return 0
 
+def Vienads():
+    num2=int(e.get())
+    result=0
+    if mathOp=="+":
+        result=num1+num2
+    elif mathOp=="-":
+        result=num1-num2
+    elif mathOp=="*":
+        result=num1*num2
+    elif mathOp=="/":
+        result=num1/num2
+    else:
+        result=0
+    e.delete(0,END)
+    e.insert(0,str(result))
+    return 0
+
+command=lambda:btnCommand('-')
+command=lambda:btnCommand('+')
+command=lambda:btnCommand('*')
+command=lambda:btnCommand('/')
+
+
 e=Entry(mansLogs,width=15,bd=10,font=("Arial Black",20),justify="right") #izveido ievades logu/displeju
 
 btn0=Button(mansLogs,text='0',padx='40',pady='20') #izveido pogu
@@ -32,7 +55,14 @@ btn7=Button(mansLogs,text='7',padx='40',pady='20')
 btn8=Button(mansLogs,text='8',padx='40',pady='20')
 btn9=Button(mansLogs,text='9',padx='40',pady='20')
 
+btnSask=Button(mansLogs,text='+',padx='40',pady='20')
+btnAtn=Button(mansLogs,text='-',padx='40',pady='20')
+btnC=Button(mansLogs,text='C',padx='40',pady='20')
+
 e.grid(row=0,column=0,columnspan=4) #displeja atrašanās vieta
+
+btnSask.grid(row=3,column=3)
+btnC.grid(row=1,column=3)
 
 btn7.grid(row=1,column=0)
 btn8.grid(row=1,column=1)
